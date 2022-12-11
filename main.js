@@ -20,11 +20,12 @@ D3.select("body")
 const app = D3.select('#app')
 const lineGenerator = D3.line().curve(D3.curveCardinal)
 
-const pathData = lineGenerator(points)
 
-// function setDValue(arr) {
-//   this.attr('d', lineGenerator(arr))
-// }
+function test() {
+  this.transition()
+  .duration(1000)
+  .attr('d', pathData)
+}
 
 const path = app.append('svg')
   .attr('style','width: 100%')
@@ -37,5 +38,4 @@ const path = app.append('svg')
   .attr('d', lineGenerator(points.map(p => [p[0], 100])) )
   .transition()
   .duration(1000)
-  .attr('d', pathData)
-
+  .attr('d', lineGenerator(points))
