@@ -1,4 +1,3 @@
-import './style.css'
 import * as D3 from 'd3'
 
 const points = [
